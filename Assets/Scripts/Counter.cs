@@ -4,11 +4,10 @@ using UnityEngine.InputSystem;
 
 public class Counter : MonoBehaviour
 {
-	[SerializeField] private float _increaseValue = 1f;
+	[SerializeField] private float _increaseNumber = 1f;
 	[SerializeField] private float _countRate = 0.5f;
 
 	private float _value = 0;
-	private bool _isWorking = true;
     private bool _isCounting = true;
 
     private void Start()
@@ -22,7 +21,7 @@ public class Counter : MonoBehaviour
 
 		if (isClicked)
 		{
-            _isWorking = !_isWorking;
+            _isCounting = !_isCounting;
         }
     }
 
@@ -36,7 +35,7 @@ public class Counter : MonoBehaviour
 
             if (_isCounting)
             {
-                _value += _increaseValue;
+                _value += _increaseNumber;
                 Debug.Log(_value);
             }            
         }
